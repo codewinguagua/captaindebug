@@ -30,9 +30,14 @@ public class MyApplication {
 	private long lastChange;
 
 	public MyApplication() {
-
+		//Config cfg = new Config();
+		/*cfg.getNetworkConfig().setPort(5701);
+		cfg.getNetworkConfig().setPortAutoIncrement(false);
+		NetworkConfig network = cfg.getNetworkConfig();
+		JoinConfig join = network.getJoin();
+		join.getMulticastConfig().setEnabled(false);
+		join.getTcpIpConfig().addMember("127.0.0.1");*/
 		HazelcastInstance instance = Hazelcast.newHazelcastInstance();
-
 		loggedOnUsers = instance.getMap("Users");
 	}
 

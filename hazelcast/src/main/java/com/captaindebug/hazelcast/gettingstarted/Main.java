@@ -17,7 +17,11 @@ public class Main {
 
 		MyApplication application = new MyApplication();
 
-		while (true) {
+		String username = theWorld.nextUser();
+		application.logon(username);
+		
+		application.displayUsers();
+		/*while (true) {
 
 			String username = theWorld.nextUser();
 
@@ -29,7 +33,7 @@ public class Main {
 
 			application.displayUsers();
 			TimeUnit.SECONDS.sleep(2);
-		}
+		}*/
 	}
 
 }
